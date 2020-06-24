@@ -1,7 +1,8 @@
 const roblox = require('noblox.js');
+require('dotenv').config();
 
 exports.run = async (client, message, args) => {
-    let cookie = client.config.cookie;
+    let cookie = process.env.cookie;
     try {
         await roblox.setCookie(cookie);
     } catch {
